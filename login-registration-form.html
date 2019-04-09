@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+</head>
+    
+    <title> Prijava/Registracija </title>
+    <div class="header" align="center"> Autopraonica Sarajevo </div> 
+<div class="login-box">
+  <div class="input-section">
+    <i class="far fa-user"></i>
+    <input class="input-area" type="text" placeholder="Korisničko ime">
+  </div>
+  <div class="input-section">
+    <i class="fas fa-lock"></i>
+    <input class="input-area" type="password" placeholder="Lozinka">
+  </div>
+  <div class="input-section hidden">
+    <i class="far fa-envelope"></i>
+    <input class="input-area" type="text" placeholder="Email">
+  </div>
+  <button class="btn" id="login-btn">Prijavite se</button>
+  <div class="question-box">
+    <p class="question">Niste član?</p><a class="reg-btn" href="#">Registrujte se</a>
+  </div>
+</div>
+<div class="success-box">
+  <h1>Prijavljeni ste!</h1>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+    <script>$(".reg-btn").click(function() {
+  $(".hidden").slideToggle("slow");
+  if ($("#login-btn").text() === "Prijavite se") {
+    $("#login-btn").text("Registrujte se");
+    $(".question").text("Već ste član?");
+    $(".reg-btn").text("Prijavite se");
+  } else {
+    $("#login-btn").text("Prijavite se");
+    $(".question").text("Niste član?");
+    $(".reg-btn").text("Registrujte se");
+  }
+});
+
+$('#login-btn').click(function(){
+  $('.login-box').slideUp("slow"); 
+  if ($('#login-btn').text()==="Login") {
+  $('.success-box').delay(600).fadeIn("slow");
+  } else {
+   $('.success-box h1').text('Uspješno ste se prijavili!');
+   $('.success-box').delay(600).fadeIn("slow");
+  }    
+}); </script>
+</html>
+
+                                                                                  
+
+
